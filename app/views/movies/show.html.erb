@@ -12,15 +12,11 @@
       </div>
 
       <div>
-        <a href="<%= edit_movie_path(@the_movie) %>">
-          Edit movie
-        </a>
+      <%= link_to "Edit movie", edit_movie_path(@the_movie) %>
       </div>
 
       <div>
-        <a href="<%= movie_path(@the_movie) %>" data-turbo-method="delete" data-turbo-method="delete">
-          Delete movie
-        </a>
+        <%= link_to "Delete Movie", @movie, data: { turbo_method: :delete } %>
       </div>
     </div>
 
