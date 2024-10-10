@@ -40,7 +40,7 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params.fetch(:id))
 
     @movie.title = params.fetch("title")
-    @tmovie.description = params.fetch("description")
+    @movie.description = params.fetch("description")
 
     if @movie.valid?
       @movie.save
